@@ -2,10 +2,17 @@
 
 class McpController < ActionController::API
   def handle
-    if params[:method] == "notifications/initialized"
+    if request.get?
+      render json: { status: "online", message: "MCP Server is running" }
+    elsif params[:method] == "notifications/initialized"
       head :accepted
     else
-      render(json: mcp_server.handle_json(request.body.read))
+      body = request.body.read
+      if body.present?
+        render(json: mcp_server.handle_json(body))
+      else
+        render json: { error: "Missing request body" }, status: :bad_request
+      end
     end
   end
 
