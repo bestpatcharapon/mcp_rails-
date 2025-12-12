@@ -23,7 +23,7 @@ git push origin main
 3. Render will auto-detect `render.yaml`
 4. Add environment variables:
    - `RAILS_MASTER_KEY`: Copy from `config/master.key`
-   - `MCP_API_KEY`: Your secret key (e.g., `mcp-secret-key-12345`)
+   - `MCP_API_KEY`: Your secret key (e.g., `mcp-banana-2025`)
    - `AZURE_DEVOPS_PAT`: (Optional) Your Azure DevOps token
    - `AZURE_DEVOPS_ORG`: (Optional) e.g., `bananacoding`
 
