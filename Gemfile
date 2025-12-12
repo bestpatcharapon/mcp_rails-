@@ -71,5 +71,7 @@ gem "mcp", "~> 0.4.0"
 
 gem "dotenv-rails", "~> 3.2"
 
-# Fix for net-pop dependency issue on Render
+# Fix for net-pop dependency issue on Render (using patched version from source if needed)
+# Or ensure standard version works by explicitly defining dependencies
 gem "net-protocol"
+gem "net-pop", "~> 0.1.2"

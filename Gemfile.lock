@@ -420,6 +420,7 @@ PLATFORMS
   x86-linux-gnu
   x86-linux-musl
   x86_64-darwin
+  x86_64-linux
   x86_64-linux-gnu
   x86_64-linux-musl
 
@@ -435,6 +436,7 @@ DEPENDENCIES
   jbuilder
   kamal
   mcp (~> 0.4.0)
+  net-pop (~> 0.1.2)
   net-protocol
   pg (~> 1.5)
   propshaft
