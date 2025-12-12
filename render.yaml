@@ -1,0 +1,27 @@
+# Render Blueprint Configuration
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: mcp-on-rails
+    runtime: docker
+    plan: free
+    healthCheckPath: /up
+    envVars:
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: MCP_API_KEY
+        sync: false
+      - key: AZURE_DEVOPS_PAT
+        sync: false
+      - key: AZURE_DEVOPS_ORG
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mcp-db
+          property: connectionString
+
+databases:
+  - name: mcp-db
+    plan: free
+    databaseName: mcp_production
