@@ -70,3 +70,6 @@ end
 gem "mcp", "~> 0.4.0"
 
 gem "dotenv-rails", "~> 3.2"
+
+# Fix for net-pop dependency issue on Render
+gem "net-protocol"
